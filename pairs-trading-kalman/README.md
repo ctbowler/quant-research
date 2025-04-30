@@ -70,7 +70,7 @@ The intercept term βₜ was consistently estimated as 0 throughout the Kalman f
 
 ![kalman_pairs_trading](https://github.com/user-attachments/assets/ea0d8407-7165-4d56-8563-1de5c7cfc18d)
 
-The large variability in the estimated hedge ratio reflects the nonstationary relationship between the assets (APPLE + JP MORGAN). Despite this behavior, the Kalman Filter algorithm successfully adapted in real time, maintaining profitability during those volatile periods. This demonstrates the power of adaptive filtering techniques like Kalmaan filtering in dynamic, highly non-stationary environments.
+The large variability in the estimated hedge ratio reflects the nonstationary relationship between the assets (APPLE + JP MORGAN). Despite this behavior, the Kalman Filter algorithm successfully adapted in real time, maintaining profitability during those volatile periods. This demonstrates the power of adaptive filtering techniques like Kalman filtering in dynamic, highly non-stationary environments.
 
 
 The strategy holds only one unit (scaled by `α`) per asset at a time, which limits notional exposure but keeps risk tight and consistent. This design results in relatively low nominal PnL, but the return-to-risk ratio is strong, indicating high strategy efficiency.
