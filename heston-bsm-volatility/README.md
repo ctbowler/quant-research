@@ -19,7 +19,7 @@ Where:
 - `σ`: constant volatility  
 - `Wₜ`: standard Brownian motion
 
-The BSM model implies a closed-form solution for European call options and produces a flat IV curve across strikes when volatility is constant.
+The BSM model implies a closed-form solution for European call options and produces a flat IV curve across strikes when volatility is constant. For more information, see references or https://github.com/ctbowler/prosperity3-trading
 
 ---
 
