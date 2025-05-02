@@ -10,7 +10,7 @@ This repository showcases a collection of research-driven projects in quantitati
   Monte Carlo comparison of option prices and implied vol surfaces under stochastic and constant volatility assumptions
 
 - **ARIMA-GARCH and Time Series Volatility Models**  
-  Forecasting returns and conditional variance with autoregressive and heteroskedastic models (work in progress)
+  Forecasting returns and conditional variance with autoregressive and heteroskedastic models (work in progress, goal is Sharpe 2.5+)
 
 Each project includes Python code, plots, and documentation that emphasize core modeling insights and practical applications in pricing, risk, or signal extraction.
 
