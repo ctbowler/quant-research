@@ -9,7 +9,7 @@ This repository presents a curated collection of research projects in quantitati
   
 
 - **Heston vs Black-Scholes Volatility Modeling**  
-  Monte Carlo simulation comparing option pricing and implied volatility surfaces under stochastic (Heston) and constant (Black-Scholes) volatility models.
+  Monte Carlo simulation comparing option pricing and implied volatility surfaces under stochastic (Heston) and constant (Black-Scholes) volatility models. No backtesting, purely for model analysis and understanding. 
 
 - **AR-GARCH Forecasting for Index Additions (Sharpe = 2.75)**  
   Time series modeling of returns and volatility following index inclusion events using AR and GARCH models.
