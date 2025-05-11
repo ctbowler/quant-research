@@ -10,8 +10,8 @@ import time
 # --- API Setup and Strategy Parameters ---
 
 # Polygon.io API key for market data
-polygon_key = "KFzmL8ylDoI1Ej0M69h5Bm4GUrLpgbmj"
-fred_key = "78177fd1df66e14d4cdee0b282b0143e"
+polygon_key = "MY POLYGON KEY"
+fred_key = "MY FRED KEY"
 client = RESTClient(polygon_key)
 
 # Strategy configuration
