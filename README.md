@@ -4,16 +4,17 @@ This repository presents a curated collection of research projects in quantitati
 
 ## 🧠 Project Highlights
 
-- **Kalman Filter-Based Pairs Trading**  
+- **Kalman Filter-Based Pairs Trading (Sharpe = 2.66)**  
   Dynamic hedge ratio estimation using a Kalman filter for spread-based statistical arbitrage.
+  
 
 - **Heston vs Black-Scholes Volatility Modeling**  
   Monte Carlo simulation comparing option pricing and implied volatility surfaces under stochastic (Heston) and constant (Black-Scholes) volatility models.
 
-- **AR-GARCH Forecasting for Index Additions**  
+- **AR-GARCH Forecasting for Index Additions (Sharpe = 2.75)**  
   Time series modeling of returns and volatility following index inclusion events using AR and GARCH models.
 
-- **Momentum Trading on Index Additions**  
+- **Momentum Trading on Index Additions (Sharpe = 2.99)**  
   Event-driven momentum strategy leveraging z-score thresholds and trade flow data for signal generation.
 
 Each project includes Python code, visualizations, and brief write-ups focused on the core modeling techniques and their applications in trading, pricing, or risk forecasting.
