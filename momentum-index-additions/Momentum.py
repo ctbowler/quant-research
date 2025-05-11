@@ -16,8 +16,8 @@ daily PnL, with Sharpe ratio computation for overall performance.
 """
 
 # --- CONFIGURATION ---
-polygon_key = "KFzmL8ylDoI1Ej0M69h5Bm4GUrLpgbmj"
-fred_key = "78177fd1df66e14d4cdee0b282b0143e"
+polygon_key = "MY POLYGON KEY"
+fred_key = "MY FRED KEY"
 portfolio_size = 5_000_000
 txn_cost_per_share = 0.01
 position_loss_cap = 0.001 * portfolio_size  # cap of $5,000 per position
