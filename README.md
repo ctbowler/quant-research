@@ -17,6 +17,10 @@ This repository presents a curated collection of research projects in quantitati
 - **Momentum Trading on Index Additions (Sharpe = 2.99)**  
   Event-driven momentum strategy leveraging z-score thresholds and trade flow data for signal generation.
 
+- **IMC Prosperity Competition**
+  This repository contains my trading algorithms developed for the IMC Prosperity Trading Competition. Strategies focus on market making, volatility arbitrage, spread trading, and multi-asset momentum detection across a range of structured products, options, and baskets.
+  https://github.com/ctbowler/prosperity3-trading
+
 Each project includes Python code, visualizations, and brief write-ups focused on the core modeling techniques and their applications in trading, pricing, or risk forecasting.
 
 ---
