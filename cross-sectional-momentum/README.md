@@ -4,7 +4,7 @@
 
 ### **Overview**
 
-This project explores a core hypothesis from [Alpha Architect](https://alphaarchitect.com/): that **momentum strategies** can deliver superior risk-adjusted returns by selecting stocks with strong recent performance while **filtering out short-term mean-reverting noise**. Specifically, we aim to test whether **avoiding crowded or "overbought" trades using RSI logic** improves long-term momentum execution.
+This project explores a core hypothesis from [Alpha Architect](https://alphaarchitect.com/): that **momentum strategies** can deliver superior risk-adjusted returns by selecting stocks with strong recent performance using the Frog-in-Pan (FIP) metric. I also made attempts to **filter out short-term mean-reverting noise**. Specifically, I tested whether **avoiding crowded or "overbought" trades using RSI logic** improves long-term momentum execution.
 
 Two different portfolio entry points are analyzed:
 
