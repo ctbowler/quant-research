@@ -4,10 +4,11 @@ import matplotlib.pyplot as plt
 from datetime import datetime, timedelta
 from polygon import RESTClient
 from tqdm import tqdm
+from constants import API_KEY
 tqdm.pandas()  # For progress bar
 
 # --- Setup Polygon Key + API Client --- #
-api_key = "INSERT API KEY HERE"
+api_key = API_KEY
 client = RESTClient(api_key)
 
 # --- Set Portfolio Parameters --- #
