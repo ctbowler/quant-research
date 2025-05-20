@@ -128,7 +128,7 @@ This strategy exhibits a short-term reversions—visible in temporary divergence
 
 The portfolio returned 21%, outperforming the S&P 500 benchmark by 10 percentage points. With a Sharpe ratio of 1.74 and a beta of 1.41, the strategy again demonstrated strong market-adjusted returns. However, the higher alpha of 8.6% came with significantly greater exposure to both systematic and non-systematic risk. This is evident in the steep -31% drawdown, which highlights how volatile the path to outperformance can be. Despite selecting stocks with previously strong and steady momentum, the portfolio experienced an immediate reversion after entry. This suggests the inherent danger of chasing performance just as it begins to fade — a common pitfall in momentum strategies. Though the portfolio ultimately recovered and delivered positive returns by the end of the year, the recovery was much more volatile than the initial leg up, underscoring the fragility of alpha when timing misaligns with regime shifts. It would be natural to try to use volatility as an indicator for such events, however reversions occurred even in low volatility regimes, which agrees with the implications of the Alpha Architect article. 
 
-Still, the individual return chart clearly shows that a handful of names experienced outsized gains over the holding period. These high-performing outliers exemplify the upside of embracing idiosyncratic risk — providing profit opportunities that broad, diversified index strategies would have largely missed or diluted away.
+Still, the individual return chart (fig. 2.2) clearly shows that a handful of names experienced outsized gains over the holding period. These high-performing outliers exemplify the upside of embracing idiosyncratic risk — providing profit opportunities that broad, diversified index strategies would have largely missed or diluted away.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ---
@@ -141,7 +141,7 @@ As a quick exploratory step, I tested whether any initial filtering metrics (e.g
   <img src="plots/feature_correlation_01_03_2024.png" alt="feature_correlation_01_03_2024.png" width="700" style="border:1px solid #ccc; border-radius:8px; padding:4px;">
 </p>
 <p align="center">
-  <em>Figure 2.2: Individual returns of stocks within our portfolio (May 2024–May 2025)</em>
+  <em>Figure 2.3: Correlation plot for portfolio returns and parameters (Jan 2024–Jan 2025)</em>
 </p>
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
