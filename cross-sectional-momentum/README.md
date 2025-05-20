@@ -57,12 +57,7 @@ client.get_aggs(ticker, 1, "day", start_date, end_date)
 ### 💵 **Backtest Results & PnL Summary**
 
 
-<p align="center">
-  <img src="plots/portfolio_vs_spy.png" alt="Portfolio vs SPY" width="700" style="border:1px solid #ccc; border-radius:8px; padding:4px;">
-</p>
-<p align="center">
-  <em>Figure 1: Portfolio vs SPY (Jan 2024–Jan 2025)</em>
-</p>
+
 
 #### **January 3, 2024 - January 3, 2025:**
  
@@ -80,10 +75,21 @@ client.get_aggs(ticker, 1, "day", start_date, end_date)
 
 🔸 **β:** `1.26`
 
-![portfolio_vs_spy_1_03_24](https://github.com/user-attachments/assets/d972ebae-a276-4b3a-9875-f6d27a4842fb)
-![individual_returns_1_03_24](https://github.com/user-attachments/assets/03abe3ea-9acf-490d-8f8e-16edf1caf1b3)
+<p align="center">
+  <img src="plots/portfolio_vs_spy_01_03_2024.png" alt="portfolio_vs_spy_01_03_2024" width="700" style="border:1px solid #ccc; border-radius:8px; padding:4px;">
+</p>
+<p align="center">
+  <em>Figure 1.1: Portfolio vs SPY Returns (Jan 2024–Jan 2025)</em>
+</p>
 
-The portfolio returned 42% over the year, outperforming the S&P 500 by 17 percentage points. With a Sharpe ratio of 1.74 and a beta of 1.26, the strategy demonstrated strong risk-adjusted performance despite higher volatility. An alpha of 4.7% indicates that the portfolio exceeded expected returns based on market exposure, highlighting a meaningful edge. The volatility of the strategy is reflected in the amplified fluctuations relative to SPY, as the portfolio intentionally takes on greater systematic and idiosyncratic risk in pursuit of outperformance. Furthermore, the individual stock return plot shows that several holdings posted substantial gains. This reflects the benefits of being exposed to non-systematic risks. These extreme winners, which would be diluted in a market index, played a key role in driving overall portfolio alpha.
+<p align="center">
+  <img src="plots/individual_returns_1_03_24.png" alt="individual_returns_1_03_24.png" width="700" style="border:1px solid #ccc; border-radius:8px; padding:4px;">
+</p>
+<p align="center">
+  <em>Figure 1.2: Individual returns of stocks within our portfolio (Jan 2024–Jan 2025)</em>
+</p>
+
+The portfolio returned 42% over the year, outperforming the S&P 500 by 17 percentage points (fig. 1.1). With a Sharpe ratio of 1.74 and a beta of 1.26, the strategy demonstrated strong risk-adjusted performance despite higher volatility. An alpha of 4.7% indicates that the portfolio exceeded expected returns based on market exposure, highlighting a meaningful edge. The volatility of the strategy is reflected in the amplified fluctuations relative to SPY, as the portfolio intentionally takes on greater systematic and idiosyncratic risk in pursuit of outperformance. Furthermore, the individual stock return plot (fig 1.2) shows that several holdings posted substantial gains. This reflects the benefits of being exposed to non-systematic risks. These extreme winners, which would be diluted in a market index, played a key role in driving overall portfolio alpha.
 
 This strategy exhibits a short-term reversions—visible in temporary divergence between portfolio and SPY returns near August—the momentum reasserts itself shortly afterward. However, this highlights an important risk: the strategy remains vulnerable to initiating positions just before a reversal, as illustrated by the drawdown following the May 18, 2024 entry point.
 
@@ -104,8 +110,19 @@ This strategy exhibits a short-term reversions—visible in temporary divergence
 
 🔹 **β:** `1.41`
   
-![portfolio_5_15_24](https://github.com/user-attachments/assets/4a89499e-f6c6-418b-b074-211db63f77ad)
-![individual_returns_5_15_24](https://github.com/user-attachments/assets/3a921fd4-9a5a-48eb-af94-cc46fb6f1019)
+<p align="center">
+  <img src="plots/portfolio_vs_spy_01_03_2024.png" alt="portfolio_vs_spy_01_03_2024" width="700" style="border:1px solid #ccc; border-radius:8px; padding:4px;">
+</p>
+<p align="center">
+  <em>Figure 2.1: Portfolio vs SPY Returns (May 2024–May 2025)</em>
+</p>
+
+<p align="center">
+  <img src="plots/portfolio_vs_spy_01_03_2024.png" alt="portfolio_vs_spy_01_03_2024" width="700" style="border:1px solid #ccc; border-radius:8px; padding:4px;">
+</p>
+<p align="center">
+  <em>Figure 2.2: Individual returns of stocks within our portfolio (May 2024–May 2025)</em>
+</p>
 
 The portfolio returned 21%, outperforming the S&P 500 benchmark by 10 percentage points. With a Sharpe ratio of 1.74 and a beta of 1.41, the strategy again demonstrated strong market-adjusted returns. However, the higher alpha of 8.6% came with significantly greater exposure to both systematic and non-systematic risk. This is evident in the steep -31% drawdown, which highlights how volatile the path to outperformance can be. Despite selecting stocks with previously strong and steady momentum, the portfolio experienced an immediate reversion after entry. This suggests the inherent danger of chasing performance just as it begins to fade — a common pitfall in momentum strategies. Though the portfolio ultimately recovered and delivered positive returns by the end of the year, the recovery was much more volatile than the initial leg up, underscoring the fragility of alpha when timing misaligns with regime shifts. It would be natural to try to use volatility as an indicator for such events, however reversions occurred even in low volatility regimes, which agrees with the implications of the Alpha Architect article. 
 
