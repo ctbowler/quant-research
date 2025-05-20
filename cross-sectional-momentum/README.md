@@ -61,7 +61,7 @@ client.get_aggs(ticker, 1, "day", start_date, end_date)
 
 #### **January 3, 2024 - January 3, 2025:**
  
-🔸 **Cumulative Return:** `42%`
+🔸 **Cumulative Return (CAGR):** `42%`
 
 🔸 **SPY (S&P500) Benchmark:** `25% `
 
@@ -96,7 +96,7 @@ This strategy exhibits a short-term reversions—visible in temporary divergence
 
 #### **May 18, 2024 - May 18, 2025:**
  
-🔹 **Cumulative Return:** `21%`
+🔹 **Cumulative Return (CAGR):** `21%`
 
 🔹 **SPY (S&P500) Benchmark:** `11% `
 
