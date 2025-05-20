@@ -1,51 +1,49 @@
 **Momentum Strategy Backtest and RSI Filter Analysis**
 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ---
 
-### **Overview**
+### 🕮 **Overview**
 
-This project explores a core hypothesis from [Alpha Architect](https://alphaarchitect.com/): that **momentum strategies** can deliver superior risk-adjusted returns by selecting stocks with strong recent performance using the Frog-in-Pan (FIP) metric. I also made attempts to **filter out short-term mean-reverting noise**. Specifically, I tested whether **avoiding crowded or "overbought" trades using RSI logic** improves long-term momentum execution.
+This project explores a core hypothesis from [Alpha Architect](https://alphaarchitect.com/): that **momentum strategies** can deliver superior risk-adjusted returns by selecting stocks with strong recent performance. I chose my universe to be all common stocks and the filtering procedure was:
+
+1. Keep the top 1500 most liquid stocks 
+2. Remove stocks that have: top 10% beta (using SPY as market returns), 5% lowest 6 and 9 month returns 
+3. Keep the top 100 stocks with highest returns over 2-12 month period (excluding most recent month)
+4. Filter top 50 stocks with highest quality momentum (number of positive daily returns over 252 trading days / 252)
+5. Hold long position for 12 months with an equally weighted portfolio
+   
+This is slightly different from Alpha Architect's procedure where their initial stock universe was based on a particular index (e.g. S&P500). 
 
 Two different portfolio entry points are analyzed:
 
 1. **January 3, 2024** — momentum strategy initiated during a broad market uptrend
-2. **May 2024** — strategy initiated during a market reversion phase (drawdown scenario)
+2. **May 18 2024** — strategy initiated during a market reversion phase (drawdown scenario)
 
-We simulate performance under two conditions:
-
-* **Unfiltered**: Hold all positions until the end of the test period
-* **RSI-filtered**: Drop positions if momentum decays despite recent gains (30d return > 0 but RSI < 50)
 
 The benchmark is the SPDR S\&P 500 ETF Trust (SPY), used to contextualize relative performance and volatility.
 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ---
 
-### **Strategy Motivation and Ideology**
+### 📐 **Strategy Motivation and Ideology**
 
-The strategy is inspired by the quantitative research of **Alpha Architect**, particularly their insights into "momentum crashes" and **investor crowding risk**. In their work, they argue that many investors naively chase past winners — leading to **overbought conditions**, sharp reversals, and **poor short-term timing**. The key idea here is that **recent winners** with strong price momentum but weakening RSI signals may represent **unsustainable trades due for reversion**.
+The strategy is inspired by the quantitative research of Alpha Architect. While Alpha Architect shows that momentum is a persistent and powerful factor, they also highlight that not all winners are equal. Momentum crashes often occur when investors chase unsustainable trends or crowded trades. To mitigate this, we employ a Frog-in-the-Pan (FIP) metric to quantify the smoothness of the returns of a particular stock. The idea is that traders won't overreact to gradual changes in returns over time, allowing a stock to keep winning. In contrast, large discrete jumps in returns may cause traders to overreact and move prices down, causing a reversion. This is analgous to how a frog placed in a pan of water won't notice gradual increases in temperature, unless the water was immediately boiling. 
 
-Thus, our process includes:
-
-* Ranking stocks by recent momentum (e.g., past 3–6 month returns)
-* Investing in a fixed-weight long-only portfolio
-* Monitoring **post-entry RSI + 30-day return**, and **exiting if signs of reversal appear**
-* **Not reallocating capital** after exit — reflecting a conservative real-world scenario where idle capital may sit in cash or treasuries
-
-We believe this framework reflects a realistic test of Alpha Architect’s ideas, and allows us to evaluate **when** and **why** momentum trades fail.
-
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ---
 
-### **Portfolio Construction**
+### 🏗️ **Portfolio Construction**
 
-#### **Ticker Selection**
+####  **Ticker Selection**
 
-Filtered tickers were selected based on prior momentum rankings (e.g. past 3–6 month return and volume filters). The selected tickers were saved to `portfolio_investment.csv` with their respective weights and latest prices at the entry date.
+Filtered tickers were selected based on prior momentum rankings listed in the **Overview** section. The selected tickers were saved to `portfolio_investment.csv` with their respective weights and latest prices at the entry date.
 
-#### **Initial Capital**
+####  **Initial Capital**
 
 \$1,000,000 equally weighted across selected stocks using the weights in `portfolio_investment.csv`.
 
-#### **Data Source**
+####  **Data Source**
 
 All price data was pulled from **Polygon.io** using the REST API with the endpoint:
 
@@ -53,134 +51,144 @@ All price data was pulled from **Polygon.io** using the REST API with the endpoi
 client.get_aggs(ticker, 1, "day", start_date, end_date)
 ```
 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ---
 
-### **RSI Exit Filter**
+### 💵 **Backtest Results & PnL Summary**
 
-After entry, positions were held until either:
 
-* The end of the backtest period
-* A custom RSI-based exit signal triggered
+<p align="center">
+  <img src="plots/portfolio_vs_spy.png" alt="Portfolio vs SPY" width="700" style="border:1px solid #ccc; border-radius:8px; padding:4px;">
+</p>
+<p align="center">
+  <em>Figure 1: Portfolio vs SPY (Jan 2024–Jan 2025)</em>
+</p>
 
-#### **Exit Logic**
+#### **January 3, 2024 - January 3, 2025:**
+ 
+🔸 **Cumulative Return:** `42%`
 
-After holding for 3 months:
+🔸 **SPY (S&P500) Benchmark:** `25% `
 
-* If 30-day return is positive **and** RSI < 50:
+🔸 **Portfolio Value:** `$1,420,672`
 
-  * Exit position (stop tracking further gains/losses)
+🔸 **Sharpe Ratio:** `1.74`
 
-#### **RSI Calculation**
+🔸 **Max Drawdown** `-12.7%`
 
-```math
-\text{RSI} = 100 - \frac{100}{1 + RS},
-```
+🔸 **α:** `4.7%`
 
-where:
+🔸 **β:** `1.26`
 
-* $RS = \frac{\text{avg gain (14d)}}{\text{avg loss (14d)}}$
+![portfolio_vs_spy_1_03_24](https://github.com/user-attachments/assets/d972ebae-a276-4b3a-9875-f6d27a4842fb)
+![individual_returns_1_03_24](https://github.com/user-attachments/assets/03abe3ea-9acf-490d-8f8e-16edf1caf1b3)
 
-Exits were **not** rebalanced across remaining positions. Proceeds were held in cash (not reinvested), ensuring conservative capital assumptions.
+The portfolio returned 42% over the year, outperforming the S&P 500 by 17 percentage points. With a Sharpe ratio of 1.74 and a beta of 1.26, the strategy demonstrated strong risk-adjusted performance despite higher volatility. An alpha of 4.7% indicates that the portfolio exceeded expected returns based on market exposure, highlighting a meaningful edge. The volatility of the strategy is reflected in the amplified fluctuations relative to SPY, as the portfolio intentionally takes on greater systematic and idiosyncratic risk in pursuit of outperformance. Furthermore, the individual stock return plot shows that several holdings posted substantial gains. This reflects the benefits of being exposed to non-systematic risks. These extreme winners, which would be diluted in a market index, played a key role in driving overall portfolio alpha.
 
+This strategy exhibits a short-term reversions—visible in temporary divergence between portfolio and SPY returns near August—the momentum reasserts itself shortly afterward. However, this highlights an important risk: the strategy remains vulnerable to initiating positions just before a reversal, as illustrated by the drawdown following the May 18, 2024 entry point.
+
+
+#### **May 18, 2024 - May 18, 2025:**
+ 
+🔹 **Cumulative Return:** `21%`
+
+🔹 **SPY (S&P500) Benchmark:** `11% `
+
+🔹 **Portfolio Value:** `$1,213,182`
+
+🔹 **Sharpe Ratio:** `1.74`
+
+🔹 **Max Drawdown** `-31%`
+
+🔹 **α:** `8.6%`
+
+🔹 **β:** `1.41`
+  
+![portfolio_5_15_24](https://github.com/user-attachments/assets/4a89499e-f6c6-418b-b074-211db63f77ad)
+![individual_returns_5_15_24](https://github.com/user-attachments/assets/3a921fd4-9a5a-48eb-af94-cc46fb6f1019)
+
+The portfolio returned 21%, outperforming the S&P 500 benchmark by 10 percentage points. With a Sharpe ratio of 1.74 and a beta of 1.41, the strategy again demonstrated strong market-adjusted returns. However, the higher alpha of 8.6% came with significantly greater exposure to both systematic and non-systematic risk. This is evident in the steep -31% drawdown, which highlights how volatile the path to outperformance can be. Despite selecting stocks with previously strong and steady momentum, the portfolio experienced an immediate reversion after entry. This suggests the inherent danger of chasing performance just as it begins to fade — a common pitfall in momentum strategies. Though the portfolio ultimately recovered and delivered positive returns by the end of the year, the recovery was much more volatile than the initial leg up, underscoring the fragility of alpha when timing misaligns with regime shifts. It would be natural to try to use volatility as an indicator for such events, however reversions occurred even in low volatility regimes, which agrees with the implications of the Alpha Architect article. 
+
+Still, the individual return chart clearly shows that a handful of names experienced outsized gains over the holding period. These high-performing outliers exemplify the upside of embracing idiosyncratic risk — providing profit opportunities that broad, diversified index strategies would have largely missed or diluted away.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ---
 
-### **Performance Metrics**
+### 📊 **Feature Correlation**
 
-The following metrics were used:
+As a quick exploratory step, I tested whether any initial filtering metrics (e.g. beta, recent returns) correlated with the final returns of stocks in the January backtest. The results showed no strong linear relationship between any single feature and future performance. There was some correlation between 2m_returns (2-12 month returns) and 9/6 month returns; however, it is not insightful as a potential early reversion signal. This suggests that simple correlations are not reliable predictors in this context, and reinforces the importance of timing and portfolio-level construction. *Note a typo in the plot title—it should say "Final 12 month return" not 9 month.*
 
-* **Cumulative Return:**
+![output (25)](https://github.com/user-attachments/assets/294f9ee1-383f-4414-a428-95e7ccf13a2d)
 
-```math
-R_t = \sum_i w_i \cdot \left( \frac{P_{i,t}}{P_{i,0}} - 1 \right)
-```
-
-* **Portfolio Value:**
-
-```math
-V_t = V_0 \cdot (1 + R_t)
-```
-
-* **Volatility:** 30-day rolling standard deviation of daily returns
-* **Benchmark:** SPY ETF performance over the same period
-
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ---
 
-### **Results Summary**
+### 🔑 **Key Takeaways**
 
-#### **1. Entry on January 3, 2024**
+* **Momentum works, but timing matters:**
+Both portfolios outperformed the S&P 500 and delivered positive alpha, but their outcomes varied significantly depending on market conditions at the entry date. Entering into strength (January 3) led to smoother outperformance, while entering during a potential regime shift (May 18) resulted in a sharp drawdown before recovery.
 
-**Unfiltered Portfolio:**
+- **Larger Alpha ≠ Better:**  
+  The May 18 portfolio had a higher alpha (`8.6%`) than the January 3 portfolio (`4.7%`), but this came with a significantly larger max drawdown (`-31%` vs. `-12.7%`) and a higher beta (`1.41`). While alpha represents market-adjusted outperformance, it doesn't account for the path taken to get there. A higher alpha can still come with more risk, volatility, or poor timing — making the strategy harder to stick with, and not necessarily “better” in practice.
 
-* **Cumulative Return:** \~48%
-* **Final Value:** \~\$1.48M
-* **Volatility:** Elevated but trending with SPY
 
-**RSI-Filtered Portfolio:**
+* **Alpha is a double-edged sword:**
+The individual return charts highlight the trade-off: while many stocks closely tracked the index, a few produced explosive gains that powered the portfolio’s performance. These outliers showcase the upside of concentrated momentum strategies. However, this also means the portfolio is more sensitive to stock-specific reversals.
 
-* **Cumulative Return:** Peaked early, declined sharply after exits
-* **Final Value:** Flatlined after majority exits
-* **Observation:** Proceeds from exits were not reallocated, causing underperformance in later months
+* **Momentum can fail short-term despite strong signals:**
+Both portfolios were constructed using high-quality momentum filters, yet the May 18 portfolio faced immediate underperformance. This underscores a key risk in momentum strategies: strong past performance is no guarantee of continued outperformance, especially near inflection points or during market transitions.
 
-**SPY:**
+* **Alpha Architect's warnings hold true:**
+These backtests illustrate Alpha Architect’s core point: momentum can outperform in the long run, but requires behavioral discipline to endure periods of painful reversion and volatility. Investors seeking alpha through concentrated factor exposures must be prepared for drawdowns and stick to the process.
 
-* **Cumulative Return:** \~27%
-* **Final Value:** \~\$1.27M
-
-![Unfiltered Portfolio vs SPY](unfiltered_portfolio.png)
-
-#### **2. Entry in May 2024 (During Reversion)**
-
-*(Analysis in progress)*
-
-* Initial results show reduced momentum persistence
-* Filtering may help reduce post-entry whipsaws
-
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ---
 
-### **Key Learnings**
+### 📈 **Future Improvements**
 
-* Momentum strategies can outperform in rising markets
-* RSI filtering may be too aggressive and lead to premature exits
-* Not reallocating capital after exits significantly impacts long-term performance
-* Unfiltered portfolios held through volatility tend to perform better in uptrending environments
+* **Reversion Detection & Exit Timing:**
+I experimented with RSI-based exit signals to avoid reversals, but they often cut profitable trends too early and added noise. Future iterations could explore more reliable reversion filters, such as volatility spikes, momentum flattening, or rolling z-score decay to improve exit timing without suppressing upside.
 
+* **Rebalancing Logic & Timing Risk:**
+While Alpha Architect notes that quarterly rebalancing tends to maximize long-term performance, I didn’t see conclusive benefits in my backtests. In fact, quarterly rebalancing often reduced profits, as new stock selections occasionally entered into reversion phases due to unfortunate timing. Future improvements could include staggered entries or rolling rebalancing windows to smooth exposure and reduce this risk.
+
+* **Sector- and Size-Based Filtering:**
+Applying momentum selection within sectors or across market cap tiers may improve risk control and help isolate true relative strength winners, while reducing systemic exposure to macro or industry-wide swings.
+
+* **Conviction-Weighted Positioning:**
+Rather than equal weighting, future portfolios could assign weights based on momentum quality, FIP scores, or volatility-adjusted returns, concentrating capital in higher-confidence positions and improving capital efficiency.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ---
 
-### **Future Improvements**
 
-* Add **partial reallocation** logic post-exit
-* Explore **different RSI thresholds** (e.g., 40, 30)
-* Use **EMA or trend filters** alongside RSI
-* Evaluate **sector-neutral** portfolio construction
-* Include **Sharpe ratio**, **max drawdown**, and **Calmar ratio** in metrics
+ ### 📂 **Script Information**
+ 
+| File                             | Description                                                                                                 |
+| -------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `0_fetch_stock_universe.py`      | Fetches all active U.S. common stock tickers from the Polygon API.                                          |
+| `1_filter-top-1500-liquidity.py` | Computes average daily volume and selects the top 1500 most liquid stocks.                                  |
+| `2_3_filter-outliers.py`         | Calculates beta vs. SPY and multi-period momentum features; filters out high-beta and weak momentum stocks. |
+| `4_filter-momentum-quality.py`   | Scores momentum smoothness using the Frog-in-the-Pan (FIP) metric and selects the top 50 stocks.            |
+| `5_portfolio-weighting.py`       | Allocates equal weights across the selected stocks and calculates share allocations based on latest prices. |
+| `6_backtest.py`                  | Runs the backtest, computes portfolio performance vs. SPY, and generates performance plots and CSV exports. |
+| `constants.py`                   | Centralized file for global constants such as `ENTRY_DATE`, `EXIT_DATE`, and `API_KEY`.                     |
 
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ---
 
-### **References**
+### 📝 **References**
 
 * [Alpha Architect Blog](https://alphaarchitect.com/): Inspiration for momentum ranking logic
 * [Polygon.io API Docs](https://polygon.io/docs/)
 * [RSI - Investopedia](https://www.investopedia.com/terms/r/rsi.asp)
 * Jegadeesh & Titman (1993): "Returns to Buying Winners and Selling Losers"
 
----
 
-### **File Structure**
-
-```
-📂 momentum/
-├── portfolio_investment.csv           # Tickers and weights
-├── cumulative_returns_unfiltered.csv  # Jan 3, 2024 portfolio performance
-├── cumulative_returns_rsi_filtered.csv
-├── spy_daily_returns.csv              # SPY benchmark
-├── rsi_exit_log.csv                   # Exit dates per ticker
-└── plots/
-    ├── unfiltered_portfolio.png
-    ├── volatility_vs_returns.png
-```
-
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ---
 
 ### **Contact**
 
-If you'd like to discuss or extend this project, feel free to reach out or open an issue!
+If you'd like to discuss or extend this project, feel free to reach out or open an issue! ctbowler@outlook.com
