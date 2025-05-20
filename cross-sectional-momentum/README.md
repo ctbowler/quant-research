@@ -109,13 +109,15 @@ This strategy exhibits a short-term reversions—visible in temporary divergence
 🔹 **α:** `8.6%`
 
 🔹 **β:** `1.41`
+
   
 <p align="center">
-  <img src="plots/portfolio_vs_spy_05_18_2024.png" alt="portfolio_vs_spy_05_18_2024.png" width="900" style="border:1px solid #ccc; border-radius:8px; padding:4px;">
+  <img src="https://github.com/ctbowler/quant-research/blob/master/cross-sectional-momentum/plots/portfolio_vs_spy_05_18_2024.png" alt="portfolio_vs_spy_05_18_2024.png" width="900" style="border:1px solid #ccc; border-radius:8px; padding:4px;">
 </p>
 <p align="center">
   <em>Figure 2.1: Portfolio vs SPY Returns (May 2024–May 2025)</em>
 </p>
+
 
 <p align="center">
   <img src="plots/individual_returns_5_18_24.png" alt="individual_returns_5_18_24.png" width="900" style="border:1px solid #ccc; border-radius:8px; padding:4px;">
