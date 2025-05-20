@@ -76,14 +76,14 @@ client.get_aggs(ticker, 1, "day", start_date, end_date)
 🔸 **β:** `1.26`
 
 <p align="center">
-  <img src="plots/portfolio_vs_spy_01_03_2024.png" alt="portfolio_vs_spy_01_03_2024" width="700" style="border:1px solid #ccc; border-radius:8px; padding:4px;">
+  <img src="plots/portfolio_vs_spy_01_03_2024.png" alt="portfolio_vs_spy_01_03_2024" width="900" style="border:1px solid #ccc; border-radius:8px; padding:4px;">
 </p>
 <p align="center">
   <em>Figure 1.1: Portfolio vs SPY Returns (Jan 2024–Jan 2025)</em>
 </p>
 
 <p align="center">
-  <img src="plots/individual_returns_1_03_24.png" alt="individual_returns_1_03_24.png" width="700" style="border:1px solid #ccc; border-radius:8px; padding:4px;">
+  <img src="plots/individual_returns_1_03_24.png" alt="individual_returns_1_03_24.png" width="900" style="border:1px solid #ccc; border-radius:8px; padding:4px;">
 </p>
 <p align="center">
   <em>Figure 1.2: Individual returns of stocks within our portfolio (Jan 2024–Jan 2025)</em>
@@ -111,14 +111,14 @@ This strategy exhibits a short-term reversions—visible in temporary divergence
 🔹 **β:** `1.41`
   
 <p align="center">
-  <img src="plots/portfolio_vs_spy_01_03_2024.png" alt="portfolio_vs_spy_01_03_2024" width="700" style="border:1px solid #ccc; border-radius:8px; padding:4px;">
+  <img src="plots/portfolio_vs_spy_05_18_2024.png" alt="portfolio_vs_spy_05_18_2024.png" width="900" style="border:1px solid #ccc; border-radius:8px; padding:4px;">
 </p>
 <p align="center">
   <em>Figure 2.1: Portfolio vs SPY Returns (May 2024–May 2025)</em>
 </p>
 
 <p align="center">
-  <img src="plots/portfolio_vs_spy_01_03_2024.png" alt="portfolio_vs_spy_01_03_2024" width="700" style="border:1px solid #ccc; border-radius:8px; padding:4px;">
+  <img src="plots/individual_returns_5_18_24.png" alt="individual_returns_5_18_24.png" width="900" style="border:1px solid #ccc; border-radius:8px; padding:4px;">
 </p>
 <p align="center">
   <em>Figure 2.2: Individual returns of stocks within our portfolio (May 2024–May 2025)</em>
@@ -135,7 +135,12 @@ Still, the individual return chart clearly shows that a handful of names experie
 
 As a quick exploratory step, I tested whether any initial filtering metrics (e.g. beta, recent returns) correlated with the final returns of stocks in the January backtest. The results showed no strong linear relationship between any single feature and future performance. There was some correlation between 2m_returns (2-12 month returns) and 9/6 month returns; however, it is not insightful as a potential early reversion signal. This suggests that simple correlations are not reliable predictors in this context, and reinforces the importance of timing and portfolio-level construction. *Note a typo in the plot title—it should say "Final 12 month return" not 9 month.*
 
-![output (25)](https://github.com/user-attachments/assets/294f9ee1-383f-4414-a428-95e7ccf13a2d)
+<p align="center">
+  <img src="plots/feature_correlation_01_03_2024.png" alt="feature_correlation_01_03_2024.png" width="700" style="border:1px solid #ccc; border-radius:8px; padding:4px;">
+</p>
+<p align="center">
+  <em>Figure 2.2: Individual returns of stocks within our portfolio (May 2024–May 2025)</em>
+</p>
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ---
