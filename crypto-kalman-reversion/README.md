@@ -154,6 +154,7 @@ DOGE's performance was highly erratic. The coin frequently overshot its Kalman m
 - High performers (LTC, AAVE, LINK) exhibited **frequent, clean oscillations** around the Kalman mean — ideal for reversion strategies.
 - Poor performers like ETH and DOGE often **trended through** the estimated mean or **whipsawed** violently, producing false signals.
 - RSI helped avoid entries during strong downward momentum, improving risk control.
+- Next time I want to include permutation tests and refined grid search optimization for more parameters (e.g. rolling mean window, etc.)
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  
 ---
