@@ -1,46 +1,77 @@
-# ⚡ C++ Crypto Trading Engine (Real-Time GUI w/ Coinbase API)
+# C++ Crypto Trading Engine (Coinbase Real-Time GUI)
 
-This project is a **low-latency, real-time trading engine and market visualizer**, built in **modern C++** and powered by live data from the **Coinbase Advanced WebSocket API**. It features a custom-built order book, high-performance rendering using **ImGui + OpenGL**, and a multi-threaded architecture that streams data from a Python client into C++ via **shared memory**.
+A real-time crypto trading engine and visualizer built in modern C++, powered by Coinbase Advanced WebSocket data. This project features a custom order book engine, low-latency rendering with ImGui + OpenGL, and a modular design optimized for performance and extensibility.
 
-<p align="center">
-  <img src="images/orderbook.png" width="600">
-  <br>
-  <em>Real-time order book depth</em>
-</p>
+<img src="images/orderbook.png" width="600" alt="Order Book Preview">
+<p align="center"><em>Live order book depth visualization</em></p>
 
 ---
 
-## 🚀 Features
+## Features
 
-- 📈 **Real-Time Order Book Visualization**
-  - Depth ladder displays live bid/ask volume
-  - Last trade marker and mid-price overlays
-
-- 📊 **Live Price Chart (Tick or Candle View)**
-  - Animated chart with optional smoothing, fading, and zooming
-  - Custom plotting renderer with glow and trailing effects
-
-- 🧠 **Optimized Trading Engine Core**
-  - Thread-safe `OrderBook`, `PriceBuffer`, and `CandleBuffer` data structures
-  - High-frequency updates with minimal memory contention
-
-- 🔁 **Shared Memory Streaming from Python**
-  - Python Coinbase WebSocket client feeds raw order book + trade data
-  - Data transferred using `mmap` shared memory buffer (non-blocking, real-time)
-  - No sockets or file I/O = faster IPC
-
-- ⚙️ **Multi-Threaded Architecture**
-  - Separate threads for:
-    - Shared memory reading
-    - GUI rendering
-    - Order book updating
-  - Mutex locks used sparingly to avoid stalling GUI
-
-- 💡 **Built for Extensibility**
-  - Plug in your own strategies (market making, reversion, analytics)
-  - Clean C++ modular design — each component is testable
+- **Real-time order book depth and trade flow**
+- **High-performance GUI** built with ImGui + OpenGL
+- **Shared memory interface** between Python and C++ for real-time data
+- **Custom trading engine core** with multi-threaded updates
+- **Streaming price chart** with optional glow, fade, and smoothing
+- **Modular C++ architecture** with extensible buffers, strategy hooks, and rendering layers
 
 ---
 
-## 📐 Architecture Overview
+## Architecture
+[ Coinbase WebSocket API ]
+↓
+[ Python Streamer: coinbase_ws_stream.py ]
+↓ (binary packed)
+[ mmap Shared Memory ]
+↓
+[ C++ SharedMemoryReader ] → [ OrderBook / CandleBuffer / PriceBuffer ]
+↓
+[ ImGui + OpenGL Rendering Layer ]
+
+---
+
+## Performance-Oriented Design
+
+| Component         | Optimization Highlights                                                                 |
+|------------------|------------------------------------------------------------------------------------------|
+| **OrderBook**     | Custom data structure for fast bid/ask updates and market/limit order simulation        |
+| **PriceBuffer**   | Rolling buffer for tick-level prices, supports real-time fade smoothing and glow effects |
+| **CandleBuffer**  | Efficient OHLC aggregation with real-time partial candle updates                        |
+| **Shared Memory** | `mmap` between Python and C++ for low-overhead, non-blocking interprocess communication |
+| **Threading**     | Background worker threads for memory reads, orderbook parsing, and GUI refresh          |
+
+---
+
+## Live Demo
+
+<img src="images/live_graph.png" width="600" alt="Live Graph">
+<p align="center"><em>Animated mid-price chart with glow smoothing</em></p>
+
+<img src="images/live_demo.gif" width="600" alt="Live Demo">
+<p align="center"><em>Full engine with order updates and price action in real time</em></p>
+
+---
+
+## Dependencies
+
+- C++20 compiler
+- CMake 3.16+
+- [GLFW](https://www.glfw.org/)
+- [ImGui](https://github.com/ocornut/imgui) (include core files and backends)
+- Python 3.8+
+  - `websocket-client` or `aiohttp`
+
+> ⚠️ Note: This project does **not** include ImGui or GLFW — you must install or link them manually.
+
+---
+
+## Purpose and Future Development
+This system was built for research and performance benchmarking in real-time trading infrastructure. It's structured for future expansion, including:
+- Strategy plugin support (market making, mean reversion, arbitrage)
+- Simulated order execution with conversion tracking
+- UI enhancements for zoom, multi-asset display, and toggles
+- Possible integration with live trading APIs (e.g., Alpaca or Coinbase Advanced)
+
+
 
