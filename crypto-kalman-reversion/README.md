@@ -11,8 +11,9 @@ The strategy is applied to **single assets**, not pairs, using:
 
 - **Kalman Filter** to estimate an adaptive price mean,  
 - **Z-score of price deviations** from the mean to trigger trades,  
-- **RSI filtering** to reduce trades during strong downward momentum,  
-- **Stop-loss logic** to contain adverse moves.
+- **RSI filtering** to reduce trades during strong downward momentum,
+- **$5000** portfolio value.
+- **Stop-loss logic** to contain adverse moves. A maximum of 5% of our portfolio is risked.
 
 Both **backtests** and **live paper trading simulations** are included.
 
@@ -74,9 +75,7 @@ Capital per coin: `$5,000`
 | LTC  | **1.58**     | 23.4%    | 9      |
 | AAVE | **1.38**     | 18.7%    | 7      |
 | LINK | 1.13         | 16.4%    | 6      |
-| UNI  | 0.57         | 8.3%     | 5      |
 | DOGE | 0.47         | 5.1%     | 4      |
-| AVAX | 0.25         | 3.2%     | 3      |
 | ETH  | -0.15        | -2.9%    | 2      |
 
 📈 Visuals:
