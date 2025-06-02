@@ -35,12 +35,13 @@ By combining the Kalman filter with a **rolling z-score** and **RSI momentum fil
 ### 🧪 **Workflow**
 
 1. **Filter Top Liquid Coins**  
-   - Uses Alpaca's historical crypto data to compute dollar volume.  
+   - Uses Alpaca's historical crypto data to compute average dollar volume.  
    - Keeps top 20 most liquid coins over a 12-month lookback.  
    - Outliers with extreme volatility or data gaps are dropped.
 
 2. **Backtest Kalman Strategy on Each Coin**  
-   - Run `mean_reversion.py` to simulate the Kalman-RSI strategy over historical prices.  
+   - Run `mean_reversion.py` to simulate the Kalman-RSI strategy over historical prices.
+   - 5 minute candles were used for out-of-sample backtesting
    - Use grid search to tune hyperparameters (Q, R, z-threshold, RSI).  
    - Evaluate by Sharpe Ratio, Return %, and PnL.
 
