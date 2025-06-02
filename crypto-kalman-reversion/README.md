@@ -72,13 +72,13 @@ By combining the Kalman filter with a **rolling z-score** and **RSI momentum fil
 Test Period: `May 3, 2024` — `May 3, 2025`  
 Capital per coin: `$5,000`  
 
-| Coin | Sharpe Ratio | Return % | Trades |
-|------|--------------|----------|--------|
-| LTC  | **1.58**     | 23.4%    | 9      |
-| AAVE | **1.38**     | 18.7%    | 7      |
-| LINK | 1.13         | 16.4%    | 6      |
-| DOGE | 0.47         | 5.1%     | 4      |
-| ETH  | -0.15        | -2.9%    | 2      |
+| Coin | Sharpe Ratio | Return % |
+|------|--------------|----------|
+| LTC  | **1.58**     | 23.4%    | 
+| AAVE | **1.38**     | 18.7%    |
+| LINK | 1.13         | 16.4%    | 
+| DOGE | 0.47         | 5.1%     | 
+| ETH  | -0.15        | -2.9%    |
 
 Each asset was backtested individually using a Kalman filter with optimized Q/R noise parameters, z-score entry threshold, and RSI confirmation filter. Trades were taken when the price dipped significantly below its dynamic mean and momentum confirmed oversold conditions. Here's a detailed look at the performance:
 
