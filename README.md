@@ -17,7 +17,7 @@ All Sharpe ratios below reflect **out-of-sample backtesting** only — no real c
 
 ---
 
-### 🔸 Index Inclusion Strategies  
+### 🔹 Index Inclusion Strategies  
 
 **AR-GARCH Forecasting**  
 **Sharpe = 2.75**  
@@ -31,7 +31,7 @@ All Sharpe ratios below reflect **out-of-sample backtesting** only — no real c
 
 ---
 
-### 🔸 Passive Momentum Strategy  
+### 🔹 Passive Momentum Strategy  
 **Sharpe = 1.74**  
 - Long-only cross-sectional momentum with 12-month holding period  
 - Filters by liquidity, beta, return smoothness, and 2–12 month momentum  
@@ -39,14 +39,14 @@ All Sharpe ratios below reflect **out-of-sample backtesting** only — no real c
 
 ---
 
-### 🔸 Kalman Pairs Trading  
+### 🔹 Kalman Pairs Trading  
 **Sharpe = 2.66**  
 - Statistical arbitrage using Kalman filter for dynamic hedge ratio estimation  
 - Mean-reverting spread modeled and traded using z-score thresholds
 
 ---
 
-### 🔸 IMC Prosperity Trading Competition  
+### 🔹 IMC Prosperity Trading Competition  
 [View Repo →](https://github.com/ctbowler/prosperity3-trading)  
 - Live competition codebase with trading logic across:  
   - Market making  
@@ -56,7 +56,7 @@ All Sharpe ratios below reflect **out-of-sample backtesting** only — no real c
 
 ---
 
-### 🔸 Heston vs Black-Scholes Volatility Models  
+### 🔹 Heston vs Black-Scholes Volatility Models  
 *No Sharpe — model analysis only*  
 - Monte Carlo simulation comparing option prices and vol surfaces  
 - Highlights differences between stochastic (Heston) and constant (B-S) volatility assumptions
