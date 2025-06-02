@@ -4,13 +4,13 @@ This repository presents a curated collection of research projects in quantitati
 
 ## Strategies + Research
 ---
-### - Kalman Filter-Based Pairs Trading  
+### (i) Kalman Filter-Based Pairs Trading  
 **Sharpe = 2.66**  
 Dynamic hedge ratio estimation using a Kalman filter for spread-based statistical arbitrage.
 
 ---
 
-### - Index Inclusion Strategies  
+### (ii) Index Inclusion Strategies  
 
 - **AR-GARCH Forecasting for Index Additions**  
   *Sharpe = 2.75*  
@@ -22,21 +22,21 @@ Dynamic hedge ratio estimation using a Kalman filter for spread-based statistica
 
 ---
 
-### Crypto Mean Reversion + Paper Trading Bot  
+### (iii) Crypto Mean Reversion + Paper Trading Bot  
 Simulated mean reversion strategy that aims to profit off volatility clustering and swing dynamics for intraday trading over a single quarter.  
 A Kalman filter was used to dynamically estimate the mean of an asset over a rolling window.  
 Z-scores and RSI were used to generate alpha signals, and out-of-sample backtests were performed for 4 different coins.
 
 ---
 
-### IMC Prosperity Competition  
+### (iv) IMC Prosperity Competition  
 [GitHub Repository →](https://github.com/ctbowler/prosperity3-trading)  
 This repository contains my trading algorithms developed for the IMC Prosperity Trading Competition.  
 Strategies focus on options (Black-Scholes), market making, spread trading, and multi-asset momentum detection across a range of structured products.
 
 ---
 
-### Heston vs Black-Scholes Volatility Modeling  
+### (v) Heston vs Black-Scholes Volatility Modeling  
 Monte Carlo simulation comparing option pricing and implied volatility surfaces under stochastic (Heston) and constant (Black-Scholes) volatility models.  
 *No backtesting — purely for model analysis and understanding.*
 
