@@ -19,23 +19,9 @@ A real-time crypto trading engine and visualizer built in modern C++, powered by
 ---
 
 ## Architecture
-Coinbase WebSocket API
-        │
-        ▼
-Python Streamer (coinbase_ws_stream.py)
-        │
-        ▼  (binary-packed via struct)
-Shared Memory (mmap buffer)
-        │
-        ▼
-C++ SharedMemoryReader
-        │
-        ▼
-[ OrderBook ] ──┬── [ PriceBuffer ]
-                └── [ CandleBuffer ]
-        │
-        ▼
-ImGui + OpenGL Rendering Layer
+
+<img src="images/architecture.png" width="700" alt="System Architecture Diagram">
+
 
 ---
 
