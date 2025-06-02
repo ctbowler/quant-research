@@ -1,6 +1,6 @@
 # 📊 Quantitative Finance Research Portfolio
 
-This repository presents a curated collection of research projects in quantitative finance, algorithmic trading, and stochastic modeling. Each folder contains a self-contained writeup and/or trading strategy with a focus on simulation-based methods, time series modeling, and financial signal interpretation. All listed Sharpe ratios come from out-of-sample backtesting. The writeups in the folders are much more detailed than whats shown here. 
+This repository presents a curated collection of research projects in quantitative finance, algorithmic trading, and stochastic modeling. Each folder contains a self-contained writeup and/or trading strategy with a focus on simulation-based methods, time series modeling, and financial signal interpretation. All listed Sharpe ratios come from **out-of-sample backtesting**, no real money was used. The writeups in the folders are much more detailed than whats shown here. 
 
 ---
 
