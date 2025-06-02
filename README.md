@@ -29,14 +29,14 @@ Z-scores and RSI were used to generate alpha signals, and out-of-sample backtest
 
 ---
 
-### (iv) IMC Prosperity Competition  
+### IMC Prosperity Competition  
 ⁍ [GitHub Repository →](https://github.com/ctbowler/prosperity3-trading)  
 ⁍ This repository contains my trading algorithms developed for the IMC Prosperity Trading Competition.  
 Strategies focus on options (Black-Scholes), market making, spread trading, and multi-asset momentum detection across a range of structured products.
 
 ---
 
-### (v) Heston vs Black-Scholes Volatility Modeling  
+### Heston vs Black-Scholes Volatility Modeling  
 ⁍ Monte Carlo simulation comparing option pricing and implied volatility surfaces under stochastic (Heston) and constant (Black-Scholes) volatility models.  
 ⁍ *No backtesting — purely for model analysis and understanding.*
 
