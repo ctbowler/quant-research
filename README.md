@@ -3,7 +3,7 @@
 This repository presents a curated collection of research projects in quantitative finance, algorithmic trading, and stochastic modeling. Each folder contains a self-contained analysis or trading strategy with a focus on simulation-based methods, time series modeling, and financial signal interpretation. All listed Sharpe ratios come from out-of-sample backtesting.
 
 ## Strategies + Research
-
+---
 ### Kalman Filter-Based Pairs Trading  
 **Sharpe = 2.66**  
 Dynamic hedge ratio estimation using a Kalman filter for spread-based statistical arbitrage.
