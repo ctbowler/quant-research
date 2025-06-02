@@ -25,7 +25,7 @@ This repository presents a curated collection of research projects in quantitati
 
 ### Passive Momentum Strategy Backtest  
 **Sharpe = 1.74**  
-Long-only momentum strategy inspired by Alpha Architect. Stocks are filtered by liquidity, beta, and return smoothness, then ranked on 2–12 month momentum. Top 50 are equally weighted and held for 12 months. Tested during both uptrend (Jan 2024) and drawdown (May 2024) — both outperformed SPY with different risk profiles.
+⁍ Long-only momentum strategy inspired by Alpha Architect. Stocks are filtered by liquidity, beta, and return smoothness, then ranked on 2–12 month momentum. Top 50 are equally weighted and held for 12 months. Tested during both uptrend (Jan 2024) and drawdown (May 2024) — both outperformed SPY with different risk profiles.
 
 ---
 
