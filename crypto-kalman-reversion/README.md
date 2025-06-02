@@ -2,7 +2,7 @@
 
 This project implements a systematic **mean reversion trading strategy** for cryptocurrencies using an **adaptive Kalman filter** to estimate the evolving fair value (local mean) of asset prices.
 
-> 📈 "When price drifts below a statistically inferred fair value and momentum confirms oversold conditions — buy and wait for the bounce."
+>  "When price drifts below a statistically inferred fair value and momentum confirms oversold conditions: buy and wait for the bounce."
 
 ## 🔧 Strategy Summary
 
