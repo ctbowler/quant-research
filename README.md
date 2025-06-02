@@ -4,17 +4,17 @@ This repository presents a curated collection of research projects in quantitati
 
 ## Strategies + Research
 ---
-#### ⁍ Kalman Filter-Based Pairs Trading  
-**Sharpe = 2.66**  
-Dynamic hedge ratio estimation using a Kalman filter for spread-based statistical arbitrage.
+### Kalman Filter-Based Pairs Trading  
+** ⁍ Sharpe = 2.66**  
+⁍ Dynamic hedge ratio estimation using a Kalman filter for spread-based statistical arbitrage.
 
 ---
 
-### ⁍ Index Inclusion Strategies  
+### Index Inclusion Strategies  
 
 - **AR-GARCH Forecasting for Index Additions**  
-  *Sharpe = 2.75*  
-  Time series modeling of returns and volatility following index inclusion events using AR and GARCH models.
+  ⁍ *Sharpe = 2.75*  
+  ⁍ Time series modeling of returns and volatility following index inclusion events using AR and GARCH models.
 
 - **Momentum Trading on Index Additions**  
   *Sharpe = 2.99*  
@@ -22,7 +22,7 @@ Dynamic hedge ratio estimation using a Kalman filter for spread-based statistica
 
 ---
 
-### ⁍ Crypto Mean Reversion + Paper Trading Bot  
+### Crypto Mean Reversion + Paper Trading Bot  
 Simulated mean reversion strategy that aims to profit off volatility clustering and swing dynamics for intraday trading over a single quarter.  
 A Kalman filter was used to dynamically estimate the mean of an asset over a rolling window.  
 Z-scores and RSI were used to generate alpha signals, and out-of-sample backtests were performed for 4 different coins.
