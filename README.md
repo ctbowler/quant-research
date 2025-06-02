@@ -13,11 +13,11 @@ This repository presents a curated collection of research projects in quantitati
 ### Index Inclusion Strategies  
 
 - **AR-GARCH Forecasting for Index Additions**  
-  * ⁍ Sharpe = 2.75*  
+  ⁍ Sharpe = 2.75  
   ⁍ Time series modeling of returns and volatility following index inclusion events using AR and GARCH models.
 
 - **Momentum Trading on Index Additions**  
-  * ⁍ Sharpe = 2.99*  
+  ⁍ Sharpe = 2.99
   ⁍ Event-driven momentum strategy leveraging z-score thresholds and trade flow data for signal generation.
 
 ---
