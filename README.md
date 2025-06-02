@@ -5,7 +5,7 @@ This repository presents a curated collection of research projects in quantitati
 ## Strategies + Research
 ---
 ### Kalman Filter-Based Pairs Trading  
-** ⁍ Sharpe = 2.66**  
+⁍ Sharpe = 2.66  
 ⁍ Dynamic hedge ratio estimation using a Kalman filter for spread-based statistical arbitrage.
 
 ---
