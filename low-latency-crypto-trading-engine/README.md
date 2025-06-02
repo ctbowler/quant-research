@@ -20,7 +20,7 @@ A real-time crypto trading engine and visualizer built in modern C++, powered by
 
 ## Architecture
 
-<img src="src/data-flow-diagram.png" width="700" alt="src/data-flow-diagram.png">
+<img src="src/data-flow-diagram.png" width="300" alt="src/data-flow-diagram.png">
 
 
 ---
