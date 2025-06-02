@@ -40,16 +40,6 @@ On the C++ side, a SharedMemoryReader thread continuously reads from this buffer
 
 ---
 
-## Live Demo
-
-<img src="images/live_graph.png" width="600" alt="Live Graph">
-<p align="center"><em>Animated mid-price chart with glow smoothing</em></p>
-
-<img src="images/live_demo.gif" width="600" alt="Live Demo">
-<p align="center"><em>Full engine with order updates and price action in real time</em></p>
-
----
-
 ## Dependencies
 
 - C++20 compiler
