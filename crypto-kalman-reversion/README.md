@@ -15,7 +15,7 @@ The strategy is applied to **single assets**, not pairs, using:
 - **$5000** portfolio value.
 - **Stop-loss logic** to contain adverse moves. A maximum of 5% of our portfolio is risked.
 
-Both **backtests** and **live paper trading simulations** are included.
+Both **backtests** and **live paper trading simulations** are included. The strategy was run over **1/03/2024 - 04/03/2024**.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  
 ---
