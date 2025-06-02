@@ -1,4 +1,4 @@
-# 📊 Quantitative Finance Research Portfolio
+# 📊 Quantitative Trading Strategies
 
 This repository showcases research projects in **quantitative finance**, **algorithmic trading**, and **stochastic modeling**. Each folder contains a self-contained analysis or strategy, focused on simulation-based methods, time series models, and financial signal interpretation.
 
