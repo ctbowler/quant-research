@@ -8,14 +8,14 @@ This repository presents a curated collection of research projects in quantitati
   Dynamic hedge ratio estimation using a Kalman filter for spread-based statistical arbitrage.
 
 - **Index Inclusion Strategies**
-- *AR-GARCH Forecasting for Index Additions (Sharpe = 2.75): Time series modeling of returns and volatility following index inclusion events using AR and GARCH models.*
-- *Momentum Trading on Index Additions (Sharpe = 2.99): Event-driven momentum strategy leveraging z-score thresholds and trade flow data for signal generation*
+  *AR-GARCH Forecasting for Index Additions (Sharpe = 2.75): Time series modeling of returns and volatility following index inclusion events using AR and GARCH models.*
+  *Momentum Trading on Index Additions (Sharpe = 2.99): Event-driven momentum strategy leveraging z-score thresholds and trade flow data for signal generation*
 
 - **Crypto Mean Reversion + Paper Trading Bot**
   Simualated mean reversion strategy that aims to profit off volatilty clustering and swing dynamics for intraday trading over a single quarter. A kalman filter was used to dynamically estimate the mean of an asset over a rolling window. Z-scores and RSI were used to generate alpha signals, and out-of-sample backtests were perforemd for 4 different coins. 
 
 - **IMC Prosperity Competition**
-- https://github.com/ctbowler/prosperity3-trading
+  https://github.com/ctbowler/prosperity3-trading
   This repository contains my trading algorithms developed for the IMC Prosperity Trading Competition. Strategies focus on options (Black-Scholes), market making, spread trading, and multi-asset momentum detection across a range of structured products.
   
 - **Heston vs Black-Scholes Volatility Modeling**  
