@@ -26,8 +26,8 @@ Traditional mean reversion strategies rely on fixed moving averages or Bollinger
 
 By combining the Kalman filter with a **rolling z-score** and **RSI momentum filter**, this strategy attempts to isolate statistically significant price dips that are also oversold, offering high-probability bounce scenarios.
 
-> 🔍 Entry occurs when price is far below the Kalman mean (z-score < –1) **and** RSI < 30.  
-> 💰 Exit is triggered when price reverts to mean **or** drawdown exceeds 5%.
+>  Entry occurs when price is far below the Kalman mean (z-score < –1) **and** RSI < 30.  
+>  Exit is triggered when price reverts to mean (sufficiently low z-score) **or** drawdown exceeds 5%.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  
 ---
