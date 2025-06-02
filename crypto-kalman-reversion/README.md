@@ -15,7 +15,7 @@ The strategy is applied to **single assets**, not pairs, using:
 - **$5000** portfolio value.
 - **Stop-loss logic** to contain adverse moves. A maximum of 5% of our portfolio is risked.
 
-Both **backtests** and **live paper trading simulations** are included. The strategy was run over **1/03/2024 - 04/03/2024**.
+Both **backtests** and **live paper trading simulations** are included. The strategy was run over **05/03/2024 - 05/03/2025**.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  
 ---
@@ -36,7 +36,7 @@ By combining the Kalman filter with a **rolling z-score** and **RSI momentum fil
 
 1. **Filter Top Liquid Coins**  
    - Uses Alpaca's historical crypto data to compute dollar volume.  
-   - Keeps top 20 most liquid coins over a 4-month lookback.  
+   - Keeps top 20 most liquid coins over a 12-month lookback.  
    - Outliers with extreme volatility or data gaps are dropped.
 
 2. **Backtest Kalman Strategy on Each Coin**  
@@ -68,7 +68,7 @@ By combining the Kalman filter with a **rolling z-score** and **RSI momentum fil
 
 ### 📊 **Backtest Results (Top Coins by Sharpe)**
 
-Test Period: `Jan 3, 2024` — `Apr 3, 2024`  
+Test Period: `May 3, 2024` — `May 3, 2025`  
 Capital per coin: `$5,000`  
 
 | Coin | Sharpe Ratio | Return % | Trades |
