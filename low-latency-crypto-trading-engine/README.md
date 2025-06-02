@@ -21,7 +21,7 @@ A real-time crypto trading engine and visualizer built in modern C++, powered by
 ## Data Flow Optimization
 To achieve low-latency data transfer between the Python WebSocket client and the C++ trading engine, this system uses **memory-mapped shared memory (mmap)** as the communication layer. The Python streamer receives market data from the Coinbase Advanced WebSocket API, encodes it into **binary-packed structs**, and writes it directly to shared memory.
 
-On the C++ side, a SharedMemoryReader thread continuously reads from this buffer, decoding the byte stream into structured messages (OrderBook, Trade, etc.) without the overhead of sockets or file I/O. This architecture enables real-time data flow and rendering with minimal delay, making it optimal for high-frequency market visualization and strategy simulation.
+On the C++ side, a SharedMemoryReader thread continuously reads from this buffer, decoding the byte stream into structured messages (OrderBook, Trade, etc.) without the overhead of sockets or file I/O — on average my data per socket request was 4x smaller than its json equivalent, hence initializing static containers with pre-set sizes can reduce json overhead. This architecture enables real-time data flow and rendering with minimal delay, making it optimal for high-frequency market visualization and strategy simulation.
 
 <img src="src/data-flow-diagram.png" width="400" alt="src/data-flow-diagram.png">
 
