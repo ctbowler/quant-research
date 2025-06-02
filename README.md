@@ -18,8 +18,8 @@ This repository presents a curated collection of research projects in quantitati
 
 ### Crypto Mean Reversion + Paper Trading Bot  
 ⁍ Simulated mean reversion strategy that aims to profit off volatility clustering and swing dynamics for intraday trading over a single quarter.  
-⁍ A Kalman filter was used to dynamically estimate the mean of an asset over a rolling window.  
-Z-scores and RSI were used to generate alpha signals, and out-of-sample backtests were performed for 4 different coins.
+⁍ A Kalman filter was used to dynamically estimate the mean of an asset over a rolling window. Z-scores and RSI were used to generate alpha signals, and out-of-sample backtests were performed for 4 different coins.
+⁍ A paper trader script is included for live paper trading through Alpaca. 
 
 ---
 
