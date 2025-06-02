@@ -144,7 +144,7 @@ ETH consistently underperformed. Despite brief periods of profitable reversion, 
 DOGE's performance was highly erratic. The coin frequently overshot its Kalman mean, then reversed violently. This **ultra-high volatility** made it difficult for the strategy to determine statistically sound entries. The strategy managed to stay positive, but sharp whipsaws made most profits **fragile and temporary**.
 
 <p align="center">
-  <img src="plots/doge.png" width="850"><br>
+  <img src="plots/DOGE.png" width="850"><br>
   <em>Figure: Cumulative PnL for DOGE/USD</em>
 </p>
 
