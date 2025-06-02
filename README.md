@@ -6,7 +6,7 @@ All Sharpe ratios below reflect **out-of-sample backtesting** only — no real c
 
 ---
 
-## 🔍 Project Highlights
+## ☐ Project Highlights
 
 ### Crypto Mean Reversion + Paper Trader  
 **Sharpe varies by coin**  
@@ -63,14 +63,14 @@ All Sharpe ratios below reflect **out-of-sample backtesting** only — no real c
 
 ---
 
-## 🧰 Tools & Stack
+## ⇛ Tools & Stack
 - Python (NumPy, pandas, matplotlib, statsmodels, `ta`, scikit-learn)
 - Jupyter notebooks for writeups and visualizations
 - Alpaca API for live market integration
 
 ---
 
-## 📎 Purpose
+## ✦ Purpose
 This portfolio was built to showcase applied research in quant finance and is intended for use in job applications across:
 - Quantitative trading / research  
 - Financial engineering  
