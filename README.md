@@ -32,7 +32,8 @@ All Sharpe ratios below reflect **out-of-sample backtesting** only — no real c
 **Sharpe = 2.99**  
 - Event-driven strategy using z-score thresholds and flow data  
 - Targets momentum bursts after S&P 500 additions
-- [See here →](https://github.com/ctbowler/quant-research/tree/master/index-inclusion-strategies/momentum-trading)
+  
+[See here →](https://github.com/ctbowler/quant-research/tree/master/index-inclusion-strategies/momentum-trading)
 
 ---
 
