@@ -1,6 +1,6 @@
 # 📊 Quantitative Trading Strategies
 
-This repository showcases research projects in **quantitative finance**, **algorithmic trading**, and **stochastic modeling**. Each folder contains a self-contained analysis or strategy, focused on simulation-based methods, time series models, and financial signal interpretation.
+This repository showcases research projects in **quantitative finance**, **algorithmic trading**, and **systems development**. Each folder contains a self-contained analysis or strategy, focused on simulation-based methods, time series models, and financial signal interpretation.
 
 All Sharpe ratios below reflect **out-of-sample backtesting** only — no real capital was deployed. Full writeups and code are included in each folder.
 
