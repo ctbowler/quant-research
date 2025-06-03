@@ -65,7 +65,7 @@ All Sharpe ratios below reflect **out-of-sample backtesting** only — no real c
 
 ---
 
-## 🧰 Systems & Infrastructure Projects
+## 🔶 Systems & Infrastructure Projects
 
 ### 🔹 Low-Latency C++ Crypto Trading Engine  
 **Real-time Coinbase GUI with custom order book and candlestick charting**  
