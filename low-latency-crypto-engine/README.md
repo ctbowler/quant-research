@@ -32,7 +32,7 @@ The trades and orderbook updates are stored in circular data structures called c
 
 
 <div align="center">
-<img src="src/circular buffers.png" width="600" alt="Circular queue visual">
+<img src="src/circular buffers.png" width="300" alt="Circular queue visual">
 <p align="center"><em>Circular queue visual provided by https://medium.com/data-science/circular-queue-or-ring-buffer-92c7b0193326 </em></p>
 </div>
 
