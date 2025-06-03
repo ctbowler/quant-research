@@ -14,7 +14,7 @@ All Sharpe ratios below reflect **out-of-sample backtesting** only — no real c
 - Alpha signals generated from z-scores and RSI  
 - Backtested on 5 crypto assets  
 - Includes a paper trading script integrated with Alpaca
-- [Link] https://github.com/ctbowler/quant-research/tree/master/crypto-kalman-reversion
+- [Link](https://github.com/ctbowler/quant-research/tree/master/crypto-kalman-reversion)
 ---
 
 ### 🔹 Index Inclusion Strategies  
@@ -23,11 +23,13 @@ All Sharpe ratios below reflect **out-of-sample backtesting** only — no real c
 **Sharpe = 2.75**  
 - Time series modeling of returns and volatility post-index inclusion  
 - Combines AR and GARCH models to predict short-term movements
-
+- [Link](https://github.com/ctbowler/quant-research/tree/master/index-inclusion-strategies/ar-garch-forecasting)
+- 
 **Momentum on Inclusions**  
 **Sharpe = 2.99**  
 - Event-driven strategy using z-score thresholds and flow data  
 - Targets momentum bursts after S&P 500 additions
+- [Link](https://github.com/ctbowler/quant-research/tree/master/index-inclusion-strategies/momentum-trading)
 
 ---
 
@@ -36,14 +38,14 @@ All Sharpe ratios below reflect **out-of-sample backtesting** only — no real c
 - Long-only cross-sectional momentum with 12-month holding period  
 - Filters by liquidity, beta, return smoothness, and 2–12 month momentum  
 - Tested across two market regimes (uptrend & drawdown)
-
+- [Link](https://github.com/ctbowler/quant-research/tree/master/passive-momentum)
 ---
 
 ### 🔹 Kalman Pairs Trading  
 **Sharpe = 2.66**  
 - Statistical arbitrage using Kalman filter for dynamic hedge ratio estimation  
 - Mean-reverting spread modeled and traded using z-score thresholds
-
+- [Link](https://github.com/ctbowler/quant-research/tree/master/pairs-trading-kalman)
 ---
 
 ### 🔹 IMC Prosperity Trading Competition  
@@ -62,7 +64,7 @@ All Sharpe ratios below reflect **out-of-sample backtesting** only — no real c
 *No Sharpe — model analysis only*  
 - Monte Carlo simulation comparing option prices and vol surfaces  
 - Highlights differences between stochastic (Heston) and constant (B-S) volatility assumptions
-
+- [Link](https://github.com/ctbowler/quant-research/tree/master/options/heston-vs-bsm-volatility)
 ---
 
 ## 🔶 Systems & Infrastructure Projects
