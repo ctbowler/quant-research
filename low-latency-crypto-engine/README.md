@@ -28,8 +28,13 @@ On the C++ side, a SharedMemoryReader thread continuously reads from this buffer
 <img src="src/data-flow-diagram.png" width="400" alt="src/data-flow-diagram.png">
 </div>
 
-The trades and orderbook updates are stored in circular data containers which I refer to as buffers (PriceBuffer, CandleBuffer). These circular buffers can be accessed and mutated in constant time as opposted to dynamic sized arrays or vectors, which have O(n) worst-case complexity for many of the operations required for data management. 
+The trades and orderbook updates are stored in circular data structures called circular queues (I refer to them as buffers e.g. PriceBuffer, CandleBuffer). These circular queues can be accessed and mutated in constant time as opposted to dynamic sized arrays or vectors, which have O(n) worst-case complexity for many of the operations required for data management. 
 
+
+<div align="center">
+<img src="src/visualization2.gif" width="600" alt="Circular queue visual">
+<p align="center"><em>Circular queue visual provided by https://medium.com/data-science/circular-queue-or-ring-buffer-92c7b0193326 </em></p>
+</div>
 
 **Note** that latency is throttled by Python's overhead for websocket requests, which happens to be on the order of milliseconds. Infact, Python's websocket libraries typically perform worse in comparison to languages like C++ (see: *"An Analysis of the Performance of WebSockets in Various Programming Languages and Libraries" (2021)* and also *Daniel Lemire’s Blog: “A Simple WebSocket Benchmark in Python” (2023)*). Therefore, the engine can be improved for HFT execution < 1ms using a C++ websocket framework, provided that the API endpoint can send updates fast enough. The smallest tick rate from the coinbase endpoint appeared to be 10ms between orderbook updates. Thus, the speed of this engine is constrained by the websocket endpoint rather than the interface itself. 
 
