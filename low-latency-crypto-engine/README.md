@@ -16,6 +16,7 @@ A real-time crypto trading engine and visualizer built in modern C++20, powered 
 - **High-performance GUI** built with ImGui + OpenGL
 - **Shared memory interface** between Python and C++ for real-time data
 - **Modular C++ architecture** with extensible buffers, multi-threading, and rendering layers
+- **Coinbase Websocket API:** `wss://advanced-trade-ws.coinbase.com`
 
 ---
 
