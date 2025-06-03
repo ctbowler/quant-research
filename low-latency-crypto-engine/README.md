@@ -24,11 +24,12 @@ To achieve low-latency data transfer between the Python WebSocket client and the
 
 On the C++ side, a SharedMemoryReader thread continuously reads from this buffer, decoding the byte stream into structured messages (OrderBook, Trade, etc.) without the overhead of sockets or file I/O — on average my *raw* data per socket request was 4x smaller than its json equivalent, hence initializing static containers with pre-set sizes can reduce json overhead. This architecture enables real-time data flow and rendering with minimal delay, making it optimal for high-frequency market visualization and strategy simulation. 
 
-**Note** that latency is throttled by Python's overhead for websocket requests, which happens to be on the order of milliseconds. Infact, Python's websocket libraries typically perform worse in comparison to languages like C++ (see: *"An Analysis of the Performance of WebSockets in Various Programming Languages and Libraries" (2021)* and also *Daniel Lemire’s Blog: “A Simple WebSocket Benchmark in Python” (2023)*). Therefore, the engine can be improved for HFT execution < 1ms using a C++ websocket framework, provided that the API endpoint can send updates fast enough. The smallest tick rate from the coinbase endpoint appeared to be 10ms between orderbook updates. Thus, the speed of this engine is constrained by the websocket endpoint rather than the interface itself. 
 
 <div align="center">
 <img src="src/data-flow-diagram.png" width="400" alt="src/data-flow-diagram.png">
 </div>
+
+**Note** that latency is throttled by Python's overhead for websocket requests, which happens to be on the order of milliseconds. Infact, Python's websocket libraries typically perform worse in comparison to languages like C++ (see: *"An Analysis of the Performance of WebSockets in Various Programming Languages and Libraries" (2021)* and also *Daniel Lemire’s Blog: “A Simple WebSocket Benchmark in Python” (2023)*). Therefore, the engine can be improved for HFT execution < 1ms using a C++ websocket framework, provided that the API endpoint can send updates fast enough. The smallest tick rate from the coinbase endpoint appeared to be 10ms between orderbook updates. Thus, the speed of this engine is constrained by the websocket endpoint rather than the interface itself. 
 
 ---
 
