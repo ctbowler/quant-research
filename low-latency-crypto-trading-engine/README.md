@@ -2,7 +2,7 @@
 
 A real-time crypto trading engine and visualizer built in modern C++, powered by Coinbase Advanced WebSocket data. This project features a custom order book engine, low-latency rendering with ImGui + OpenGL, and a modular design optimized for performance and extensibility. The goal was to give myself an easy way to trade on coinbase without the hassle of navigating through their UI. I also wanted to add a candlestick chart to my toolset as well as L2 updates with at my own tick rate. 
 
-<img src="src/visualization.gif" width="600" alt="Order Book Preview">
+<img src="src/visualization2.gif" width="600" alt="Order Book Preview">
 <p align="center"><em>Live order book depth visualization</em></p>
 
 ---
