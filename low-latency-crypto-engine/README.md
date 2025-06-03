@@ -4,7 +4,7 @@ A real-time crypto trading engine and visualizer built in modern C++20, powered 
 
 <div align="center">
 <img src="src/visualization2.gif" width="600" alt="Order Book Preview">
-<p align="center"><em>Live order book depth visualization currently showing Bitcoin through Alpaca's exchange. The tick rate is set to 10 ms, which was the smallest tick rate provided by the websocket data. </em></p>
+<p align="center"><em>Live order book depth visualization currently showing Bitcoin through Alpaca's exchange. The tick rate is set to 10 ms, which was the smallest tick rate provided by the websocket endpoint </em></p>
 </div>
   
 
