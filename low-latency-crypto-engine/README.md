@@ -24,7 +24,7 @@ To achieve low-latency data transfer between the Python WebSocket client and the
 
 On the C++ side, a SharedMemoryReader thread continuously reads from this buffer, decoding the byte stream into structured messages (OrderBook, Trade, etc.) without the overhead of sockets or file I/O — on average my *raw* data per socket request was 4x smaller than its json equivalent, hence initializing static containers with pre-set sizes can reduce json overhead. This architecture enables real-time data flow and rendering with minimal delay, making it optimal for high-frequency market visualization and strategy simulation. 
 
-Note that the latency is throttled by the rate at which Python receives websocket updates, which tends to be on the order of milliseconds. 
+**Note** that the latency is throttled by the rate at which Python receives websocket updates, which tends to be on the order of milliseconds. Infact, Python's websocket libraries typically perform worse in comparison to languages like C++ (see: *"An Analysis of the Performance of WebSockets in Various Programming Languages and Libraries" (2021)* and also *Daniel Lemire’s Blog: “A Simple WebSocket Benchmark in Python” (2023)*).
 
 <div align="center">
 <img src="src/data-flow-diagram.png" width="400" alt="src/data-flow-diagram.png">
