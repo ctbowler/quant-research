@@ -47,12 +47,12 @@ All Sharpe ratios below reflect **out-of-sample backtesting** only — no real c
 ---
 
 ### 🔹 IMC Prosperity Trading Competition  
-[View Repo →](https://github.com/ctbowler/prosperity3-trading)  
 - Live competition codebase with trading logic across:  
   - Market making  
   - Options pricing (Black-Scholes)  
   - Spread trading  
   - Multi-asset momentum
+  [View Repo →](https://github.com/ctbowler/prosperity3-trading)  
 
 ---
 
