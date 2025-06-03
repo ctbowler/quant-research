@@ -1,10 +1,10 @@
 # C++ Crypto Trading Engine (Coinbase Real-Time GUI)
 
-A real-time crypto trading engine and visualizer built in modern C++20, powered by Coinbase Advanced WebSocket data. This project features a custom order book engine, low-latency rendering with ImGui + OpenGL, and a modular design optimized for performance and extensibility. The goal was to give myself an easy way to trade on coinbase without the hassle of navigating through their UI. I wanted features like a programmable candlestick chart and L2 order book updates at my own tick rate, which aren’t accessible from Coinbase’s standard UI.
+A real-time crypto trading engine and visualizer built in modern C++20, powered by Coinbase Advanced WebSocket data. This project features a custom order book engine, low-latency rendering with ImGui + OpenGL, and a modular design optimized for performance and extensibility. The goal was to give myself an easy way to trade on coinbase without the hassle of navigating through their UI. I wanted features like a programmable candlestick chart and L2 order book updates at my own tick rate, which aren’t accessible from Coinbase’s standard UI. 
 
 <div align="center">
 <img src="src/visualization2.gif" width="600" alt="Order Book Preview">
-<p align="center"><em>Live order book depth visualization currently showing Bitcoin through Alpaca's exchange. The tick rate is set to 10 ms. </em></p>
+<p align="center"><em>Live order book depth visualization currently showing Bitcoin through Alpaca's exchange. The tick rate is set to 10 ms, which was the tick rate provided by the websocket data. </em></p>
 </div>
   
 
