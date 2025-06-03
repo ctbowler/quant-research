@@ -74,7 +74,7 @@ All Sharpe ratios below reflect **out-of-sample backtesting** only — no real c
 - Designed for **high-frequency market simulation**, with modular components and threading for order parsing, rendering, and memory I/O  
 - Optimized for <1ms latency if upgraded to a native C++ WebSocket client  
 
-👉 [View Engine →](https://github.com/ctbowler/quant-research/tree/master/your-folder-name)
+[View Engine →](https://github.com/ctbowler/quant-research/tree/master/your-folder-name)
 
 
 ---
