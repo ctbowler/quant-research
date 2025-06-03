@@ -38,7 +38,7 @@ The trades and orderbook updates are stored in circular data structures called c
 
 ---
 
-## Data Flow Optimization
+## Worst-Case Latency
 Latency is throttled by Python's overhead for websocket requests, which happens to be on the order of milliseconds. Infact, Python's websocket libraries typically perform worse in comparison to languages like C++ (see: *"An Analysis of the Performance of WebSockets in Various Programming Languages and Libraries" (2021)* and also *Daniel Lemire’s Blog: “A Simple WebSocket Benchmark in Python” (2023)*). Therefore, the engine can be improved for HFT execution < 1ms using a C++ websocket framework, provided that the API endpoint can send updates fast enough. The smallest tick rate from the coinbase endpoint appeared to be 10ms between orderbook updates. Thus, the speed of this engine is constrained by the websocket endpoint rather than the interface itself. 
 
 ---
