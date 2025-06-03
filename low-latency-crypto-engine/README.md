@@ -25,14 +25,14 @@ To achieve low-latency data transfer between the Python WebSocket client and the
 On the C++ side, a SharedMemoryReader thread continuously reads from this buffer, decoding the byte stream into structured messages (OrderBook, Trade, etc.) without the overhead of sockets or file I/O — on average my *raw* data per socket request was 4x smaller than its json equivalent, hence initializing static containers with pre-set sizes can reduce json overhead. This architecture enables real-time data flow and rendering with minimal delay, making it optimal for high-frequency market visualization and strategy simulation. 
 
 <div align="center">
-<img src="src/data-flow-diagram.png" width="400" alt="src/data-flow-diagram.png">
+<img src="src/data-flow-diagram.png" width="300" alt="src/data-flow-diagram.png">
 </div>
 
 The trades and orderbook updates are stored in circular data structures called circular queues (I refer to them as buffers e.g. PriceBuffer, CandleBuffer). These circular queues can be accessed and mutated in constant time as opposted to dynamic sized arrays or vectors, which have O(n) worst-case complexity for many of the operations required for data management. 
 
 
 <div align="center">
-<img src="src/circular buffers.png" width="400" alt="Circular queue visual">
+<img src="src/circular buffers.png" width="300" alt="Circular queue visual">
 <p align="center"><em>Circular queue visual provided by https://medium.com/data-science/circular-queue-or-ring-buffer-92c7b0193326 </em></p>
 </div>
 
