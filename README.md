@@ -14,7 +14,7 @@ All Sharpe ratios below reflect **out-of-sample backtesting** only — no real c
 - Alpha signals generated from z-scores and RSI  
 - Backtested on 5 crypto assets  
 - Includes a paper trading script integrated with Alpaca
-
+- [Link] https://github.com/ctbowler/quant-research/tree/master/crypto-kalman-reversion
 ---
 
 ### 🔹 Index Inclusion Strategies  
