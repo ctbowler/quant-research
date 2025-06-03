@@ -8,25 +8,21 @@ All Sharpe ratios below reflect **out-of-sample backtesting** only — no real c
 
 ## 🔶 Project Highlights
 
-### 🔹 Crypto Mean Reversion + Paper Trader  
+### 🔹 Crypto Mean Reversion + Paper Trader [See here →](https://github.com/ctbowler/quant-research/tree/master/crypto-kalman-reversion)
 **Sharpe varies by coin**  
 - Mean reversion strategy using Kalman-filtered dynamic mean estimation  
 - Alpha signals generated from z-scores and RSI  
 - Backtested on 5 crypto assets  
 - Includes a paper trading script integrated with Alpaca
   
-[See here →](https://github.com/ctbowler/quant-research/tree/master/crypto-kalman-reversion)
-
 ---
 
 ### 🔹 Index Inclusion Strategies  
 
-**AR-GARCH Forecasting**  
+**AR-GARCH Forecasting** [See here →](https://github.com/ctbowler/quant-research/tree/master/crypto-kalman-reversion)
 **Sharpe = 2.75**  
 - Time series modeling of returns and volatility post-index inclusion  
 - Combines AR and GARCH models to predict short-term movements
-  
-[See here →](https://github.com/ctbowler/quant-research/tree/master/index-inclusion-strategies/ar-garch-forecasting)
   
 **Momentum on Inclusions**  
 **Sharpe = 2.99**  
