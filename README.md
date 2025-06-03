@@ -21,8 +21,8 @@ All Sharpe ratios below reflect **out-of-sample backtesting** only — no real c
 
 ### 🔹 Index Inclusion Strategies  
 
-**AR-GARCH Forecasting** 
-**Sharpe = 2.75**  
+**AR-GARCH Forecasting**  
+**Sharpe = 2.75**   
 - Time series modeling of returns and volatility post-index inclusion  
 - Combines AR and GARCH models to predict short-term movements
 
