@@ -61,7 +61,7 @@ All Sharpe ratios below reflect **out-of-sample backtesting** only — no real c
   - Spread trading  
   - Multi-asset momentum
  
-  [View Repo →](https://github.com/ctbowler/prosperity3-trading)  
+[View Repo →](https://github.com/ctbowler/prosperity3-trading)  
 
 
 ---
