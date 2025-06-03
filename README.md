@@ -63,10 +63,19 @@ All Sharpe ratios below reflect **out-of-sample backtesting** only — no real c
 
 ---
 
-## 🔶 Tools & Stack
-- Python (NumPy, pandas, matplotlib, statsmodels, `ta`, scikit-learn)
-- Jupyter notebooks for writeups and visualizations
-- Alpaca API for live market integration
+## 🧰 Systems & Infrastructure Projects
+
+### 🔹 Low-Latency C++ Crypto Trading Engine  
+**Real-time Coinbase GUI with custom order book and candlestick charting**  
+- Built in **C++20** with ImGui + OpenGL for low-latency visualization  
+- Uses **shared memory (`mmap`)** to stream real-time order book + trade data from a Python WebSocket client  
+- Implements custom **OrderBook**, **PriceBuffer**, and **CandleBuffer** data structures for efficient constant-time access  
+- Tick rate decoupled from GUI — user-defined update frequency (e.g., 10ms)  
+- Designed for **high-frequency market simulation**, with modular components and threading for order parsing, rendering, and memory I/O  
+- Optimized for <1ms latency if upgraded to a native C++ WebSocket client  
+
+👉 [View Engine →](https://github.com/ctbowler/quant-research/tree/master/your-folder-name)
+
 
 ---
 
