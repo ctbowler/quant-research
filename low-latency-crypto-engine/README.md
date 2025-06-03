@@ -4,7 +4,7 @@ A real-time crypto trading engine and visualizer built in modern C++, powered by
 
 <div align="center">
 <img src="src/visualization2.gif" width="600" alt="Order Book Preview">
-<p align="center"><em>Live order book depth visualization currently showing Bitcoin through Alpaca's exchange. </em></p>
+<p align="center"><em>Live order book depth visualization currently showing Bitcoin through Alpaca's exchange. The tick rate is set to 10 ms. </em></p>
 </div>
   
 
@@ -22,7 +22,9 @@ A real-time crypto trading engine and visualizer built in modern C++, powered by
 ## Data Flow Optimization
 To achieve low-latency data transfer between the Python WebSocket client and the C++ trading engine, this system uses **memory-mapped shared memory (mmap)** as the communication layer. The Python streamer receives market data from the Coinbase Advanced WebSocket API, encodes it into **binary-packed structs**, and writes it directly to operating system's shared memory.
 
-On the C++ side, a SharedMemoryReader thread continuously reads from this buffer, decoding the byte stream into structured messages (OrderBook, Trade, etc.) without the overhead of sockets or file I/O — on average my *raw* data per socket request was 4x smaller than its json equivalent, hence initializing static containers with pre-set sizes can reduce json overhead. This architecture enables real-time data flow and rendering with minimal delay, making it optimal for high-frequency market visualization and strategy simulation.
+On the C++ side, a SharedMemoryReader thread continuously reads from this buffer, decoding the byte stream into structured messages (OrderBook, Trade, etc.) without the overhead of sockets or file I/O — on average my *raw* data per socket request was 4x smaller than its json equivalent, hence initializing static containers with pre-set sizes can reduce json overhead. This architecture enables real-time data flow and rendering with minimal delay, making it optimal for high-frequency market visualization and strategy simulation. 
+
+Note that the latency is throttled by the rate at which Python receives websocket updates, which tends to be on the order of milliseconds. 
 
 <div align="center">
 <img src="src/data-flow-diagram.png" width="400" alt="src/data-flow-diagram.png">
