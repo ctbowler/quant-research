@@ -8,7 +8,7 @@ All Sharpe ratios below reflect **out-of-sample backtesting** only — no real c
 
 ## 🔶 Project Highlights
 
-### 🔹 Crypto Mean Reversion + Paper Trader [Link](https://github.com/ctbowler/quant-research/tree/master/crypto-kalman-reversion)
+### 🔹 Crypto Mean Reversion + Paper Trader [(more info)](https://github.com/ctbowler/quant-research/tree/master/crypto-kalman-reversion)
 **Sharpe varies by coin**  
 - Mean reversion strategy using Kalman-filtered dynamic mean estimation  
 - Alpha signals generated from z-scores and RSI  
