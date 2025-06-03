@@ -16,11 +16,10 @@ All Sharpe ratios below reflect **out-of-sample backtesting** only — no real c
 - Includes a paper trading script integrated with Alpaca
 
 [See here →](https://github.com/ctbowler/quant-research/tree/master/crypto-kalman-reversion)
+
 ---
 
 ### 🔹 Index Inclusion Strategies  
-
-[See here →](https://github.com/ctbowler/quant-research/tree/master/index-inclusion-strategies)
 
 **AR-GARCH Forecasting** 
 **Sharpe = 2.75**  
@@ -31,7 +30,9 @@ All Sharpe ratios below reflect **out-of-sample backtesting** only — no real c
 **Sharpe = 2.99**  
 - Event-driven strategy using z-score thresholds and flow data  
 - Targets momentum bursts after S&P 500 additions
-  
+
+[See here →](https://github.com/ctbowler/quant-research/tree/master/index-inclusion-strategies)
+
 ---
 
 ### 🔹 Passive Momentum Strategy  
